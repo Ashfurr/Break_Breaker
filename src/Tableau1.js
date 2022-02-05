@@ -3,7 +3,10 @@
 class Tableau1 extends Phaser.Scene {
 
 
-    preload() {
+    preload(){
     }
-    create() { }
-    update() { }
+    create(){
+    }
+    update(){
+    }
+}
