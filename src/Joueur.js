@@ -15,4 +15,12 @@ class Joueur {
     pasbouger(){
         this.player.setVelocityX(0)
     }
+    bord(){
+        if(this.player.x<=190){
+            this.player.x=190
+        }
+        if(this.player.x>=1527){
+            this.player.x=1527
+        }
+  }
 }

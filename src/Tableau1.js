@@ -13,5 +13,6 @@ class Tableau1 extends Phaser.Scene {
 
     }
     update(){
+        this.player.bord()
     }
 }
