@@ -12,14 +12,12 @@ class Bricks {
             repeat: 4,
             setXY: { x: 160, y: 300, stepX: 450,},
         })
-        this.scene.physics.add.collider(this.scene.ballT.ballC,this.brique, function(){
-            me.destroyBricks(me.scene.ballT.ballC,me.brique)
-        )};
+        this.scene.physics.add.collider(this.scene.ballT.ballC,this.brique,this.destroyBricks,null,this)
     }
 
-    destroyBricks(ball, briques)
+    destroyBricks(ball,briques)
     {
         console.log('oui ')
-        briques.destroy
+        briques.destroy()
     }
 }
