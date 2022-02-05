@@ -18,9 +18,9 @@ class Tableau1 extends Phaser.Scene {
 
     renvoie(player){
         this.rando=this.ballT.ballC.x
-        this.coeff=this.rando/20
-        this.coeff=this.coeff
-        this.ballT.ballC.setVelocityX(this.ballT.ballC.body.velocity.x+this.coeff*10)
+        this.coeff=this.rando/10
+        this.coeff=this.coeff*1.5
+        this.ballT.ballC.setVelocityX(this.ballT.ballC.body.velocity.x+this.coeff*5)
     }
 
     update(){
