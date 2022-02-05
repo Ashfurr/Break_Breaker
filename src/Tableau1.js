@@ -13,7 +13,6 @@ class Tableau1 extends Phaser.Scene {
         this.player=new Joueur(this);
         this.wall=new Walls(this);
         this.keyboard=new Keyboard(this);
-
     }
 
     renvoie(player){
@@ -25,5 +24,8 @@ class Tableau1 extends Phaser.Scene {
 
     update(){
         this.player.bord()
+    }
+    win(Joueur){
+        this.player.score ++;
     }
 }

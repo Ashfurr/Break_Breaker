@@ -1,7 +1,21 @@
 class Joueur {
-    constructor(Tableau1){
+    get score() {
+        return this._score;
+    }
+
+    set score(value) {
+        this._score = value;
+        this.$score.textContent=  this._score
+    }
+
+    constructor(Tableau1,name,scoreID){
         let me = this
         this.Tablo= Tableau1
+
+        this._score = 0;
+        this.name = name;
+        this.scoreId = scoreID;
+
 
         this.player=this.Tablo.physics.add.sprite(650,850,'pad')
         this.player.setDisplaySize(400,20)
