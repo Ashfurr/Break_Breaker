@@ -2,10 +2,9 @@
 
 class Tableau1 extends Phaser.Scene {
 
-
     preload(){
         this.load.image('pad','assets/carre.png')
-        this.load.image('brick','assets/bricks.png')
+        this.load.image('brick','assets/barreRED.png')
     }
     create(){
         this.detect=0

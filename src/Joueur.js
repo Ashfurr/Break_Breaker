@@ -17,7 +17,7 @@ class Joueur {
         this.scoreId = scoreID;
 
 
-        this.player=this.Tablo.physics.add.sprite(gameConfig.width/2,850,'pad')
+        this.player=this.Tablo.physics.add.sprite(gameConfig.width/2,900,'pad')
         this.player.setDisplaySize(400,20)
         this.player.setImmovable(true)
         this.player.setVelocityX(0)
