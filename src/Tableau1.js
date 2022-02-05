@@ -8,6 +8,8 @@ class Tableau1 extends Phaser.Scene {
     }
     create(){
         this.player=new Joueur(this);
+        this.wall=new Walls(this);
+
     }
     update(){
     }
