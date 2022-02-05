@@ -6,4 +6,13 @@ class Joueur {
         this.player.setDisplaySize(400,20)
         this.player.setVelocityX(0)
     }
+    gauche(){
+        this.player.setVelocityX(-500)
+    }
+    droite(){
+        this.player.setVelocityX(500)
+    }
+    pasbouger(){
+        this.player.setVelocityX(0)
+    }
 }

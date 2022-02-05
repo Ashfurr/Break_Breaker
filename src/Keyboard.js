@@ -17,10 +17,10 @@ class Keyboard {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
             if (event.key === "s") {
-                ;
+               me.scene.player.gauche();
             }
-            if (event.key === "x") {
-               ;
+            if (event.key === "d") {
+               me.scene.player.droite();
             }
             if (event.key === "j") {
                 ;
@@ -35,10 +35,10 @@ class Keyboard {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
             if (event.key === "s") {
-                ;
+                me.scene.player.pasbouger();;
             }
-            if (event.key === "x") {
-                ;
+            if (event.key === "d") {
+                me.scene.player.pasbouger();  ;
             }
             if (event.key === "j") {
                 ;
