@@ -14,7 +14,7 @@ let gameConfig = {
             height: 972,
         }
     },
-    backgroundColor: '#5772F8',
+    backgroundColor: '#000000',
     audio: {
         disableWebAudio: true
     },
