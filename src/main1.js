@@ -4,14 +4,13 @@ let gameConfig = {
     height: 972,
     scale: {
         mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
         min: {
-            width: 800,
-            height: 600
+            width: 600,
+            height: 800
         },
         max: {
-            width: 1728,
-            height: 972,
+            width: 720,
+            height: 900,
         }
     },
     backgroundColor: '#000000',
