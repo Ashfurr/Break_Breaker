@@ -8,6 +8,13 @@ class Joueur {
         this.$score.textContent=  this._score
     }
 
+    renvoie(Tableau1){
+        this.rando=this.Tablo.ballT.ballC.x
+        this.coeff=this.rando/10
+        this.coeff=this.coeff*1.5
+        this.Tablo.ballT.ballC.setVelocityX(this.Tablo.ballT.ballC.body.velocity.x+this.coeff*5)
+    }
+
     constructor(Tableau1,name,scoreID){
         let me = this
         this.Tablo= Tableau1
@@ -22,9 +29,10 @@ class Joueur {
         this.player.setImmovable(true)
         this.player.setVelocityX(0)
         this.Tablo.physics.add.collider(this.player,this.Tablo.ballT.ballC,function () {
-            me.Tablo.renvoie(me.player)
+            me.renvoie(me.player)
         })
     }
+
     gauche(){
         this.player.setVelocityX(-800)
     }
