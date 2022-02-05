@@ -4,7 +4,9 @@ class Joueur {
 
         this.player=this.Tablo.physics.add.sprite(650,850,'pad')
         this.player.setDisplaySize(400,20)
+        this.player.setImmovable(true)
         this.player.setVelocityX(0)
+        this.Tablo.physics.add.collider(this.player,this.Tablo.ballT.ballC)
     }
     gauche(){
         this.player.setVelocityX(-500)

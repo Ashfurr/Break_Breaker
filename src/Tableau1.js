@@ -7,8 +7,8 @@ class Tableau1 extends Phaser.Scene {
         this.load.image('pad','assets/carre.png')
     }
     create(){
-        this.player=new Joueur(this);
         this.ballT=new Ball(this);
+        this.player=new Joueur(this);
         this.wall=new Walls(this);
         this.keyboard=new Keyboard(this);
 
