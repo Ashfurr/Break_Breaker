@@ -22,9 +22,16 @@ class Joueur {
         this.player.setImmovable(true)
         this.player.setVelocityX(0)
         this.Tablo.physics.add.collider(this.player,this.Tablo.ballT.ballC,function () {
-            me.Tablo.renvoie(me.player)
+            me.renvoie(me.player)
         })
     }
+    renvoie(player){
+        this.rando=this.Tablo.ballT.ballC.x
+        this.coeff=this.rando/10
+        this.coeff=this.coeff*1.5
+        this.Tablo.ballT.ballC.setVelocityX(this.Tablo.ballT.ballC.body.velocity.x+this.coeff*5)
+    }
+
     gauche(){
         this.player.setVelocityX(-800)
     }
