@@ -20,8 +20,9 @@ class Tableau1 extends Phaser.Scene {
 
     update(){
         this.player.bord()
-        if(this.ballT>gameConfig.height){
+        if(this.ballT.ballC.y>gameConfig.height){
         this.ballT.Reset()
+            console.log('ça marche')
         }
     }
     win(Joueur){

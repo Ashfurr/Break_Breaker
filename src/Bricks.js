@@ -27,7 +27,6 @@ class Bricks {
 
     destroyBricks(ball,briques)
     {
-        console.log('oui ')
         briques.destroy()
     }
 }
