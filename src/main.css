@@ -31,12 +31,13 @@ canvas{
 
 #scores{
     color: #7D00FF;
+    margin-left: 6vw;
     font-size : 3vw;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     position: absolute;
-    top: 0;
-    width: 100%;
+    top: 0vw;
+
 }
 
 .score{
