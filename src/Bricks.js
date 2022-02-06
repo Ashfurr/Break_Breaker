@@ -3,14 +3,24 @@ class Bricks {
         this.scene=Tableaux1
         let me = this
         this.brique = this.scene.physics.add.staticGroup({
-            key: 'brick',
-            repeat: 2,
-            setXY: { x: 160, y: 100, stepX: 450,},
-        }).setOrigin(0.0);
+            key: 'brickr',
+            repeat: 11,
+            setXY: { x: 130, y: 100, stepX: 135,},
+        })
         this.brique.createMultiple({
-            key: 'brick',
-            repeat: 4,
-            setXY: { x: 160, y: 300, stepX: 450,},
+            key: 'brickp',
+            repeat: 11,
+            setXY: { x: 130, y: 175, stepX: 135},
+        })
+        this.brique.createMultiple({
+            key: 'brickg',
+            repeat: 11,
+            setXY: { x: 130, y: 250, stepX: 135},
+        })
+        this.brique.createMultiple({
+            key: 'bricko',
+            repeat: 11,
+            setXY: { x: 130, y: 325, stepX: 135},
         })
         this.scene.physics.add.collider(this.scene.ballT.ballC,this.brique,this.destroyBricks,null,this)
     }
