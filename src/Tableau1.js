@@ -46,7 +46,7 @@ class Tableau1 extends Phaser.Scene {
         this.player.score=0
         this.ballT.Reset();
         this.player.Reset();
-        this.brick=new Bricks(this);
+        document.location.reload(true)
 
     }
 }
