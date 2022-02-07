@@ -1,18 +1,7 @@
 let gameConfig = {
     type: Phaser.AUTO,
-    width: 720,
-    height: 900,
-    scale: {
-        mode: Phaser.Scale.FIT,
-        min: {
-            width: 600,
-            height: 800
-        },
-        max: {
-            width: 720,
-            height: 900,
-        }
-    },
+    width: 800,
+    height: 800,
     backgroundColor: '#000000',
     audio: {
         disableWebAudio: true

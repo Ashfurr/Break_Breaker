@@ -1,4 +1,11 @@
 class Joueur {
+    get vie() {
+        return this._vie;
+    }
+
+    set vie(value) {
+        this._vie = value;
+    }
     get score() {
         return this._score;
     }
@@ -8,16 +15,22 @@ class Joueur {
         this.$score.textContent=  this._score
     }
 
-    constructor(Tableau1,name,scoreID){
+    constructor(Tableau,scoreId){
         let me = this
         this.Tablo= Tableau1
 
         this._score = 0;
         this.name = name;
-        this.scoreId = scoreID;
+        this.htmlID = scoreId;
+        this._vie=3;
+
+        this.$el = document.getElementById(scoreId);
+        this.$score = this.$el.querySelector(".score")
+        this.$vie = this.$el.querySelector(".vie")
 
 
-        this.player=this.Tablo.physics.add.sprite(gameConfig.width/2,800,'pad')
+
+        this.player=this.Tablo.physics.add.sprite(gameConfig.width/2,700,'pad')
         this.player.setDisplaySize(200,20)
         this.player.setImmovable(true)
         this.player.setVelocityX(0)
@@ -51,7 +64,7 @@ class Joueur {
   }
   Reset(){
         this.player.x=gameConfig.width/2;
-        this.player.y=800;
+        this.player.y=700;
 
   }
 }
