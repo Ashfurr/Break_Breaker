@@ -51,7 +51,7 @@ class Joueur {
   }
   Reset(){
         this.player.x=gameConfig.width/2;
-        this.player.y=900;
+        this.player.y=800;
 
   }
 }
