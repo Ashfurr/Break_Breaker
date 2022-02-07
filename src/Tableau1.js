@@ -26,7 +26,7 @@ class Tableau1 extends Phaser.Scene {
         this.player.Reset();
         this.player.vie-=1
         }
-        if(this.player.vie==2){
+        if(this.player.vie==0){
                 alert("Perdue Looser !")
             this.totalReset()
         }
