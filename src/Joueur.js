@@ -30,7 +30,7 @@ class Joueur {
         this.$score = this.$el.querySelector(".score")
         this.$vie = this.$el.querySelector(".vie")
 
-        this.player=this.scene.physics.add.sprite(gameConfig.width/2,700,'pad')
+        this.player=this.scene.physics.add.sprite(gameConfig.width/2,700,'pad').setTintFill(0xFFFFFF)
         this.player.setDisplaySize(200,20)
         this.player.setImmovable(true)
         this.player.setVelocityX(0)

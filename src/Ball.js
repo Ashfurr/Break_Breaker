@@ -3,7 +3,7 @@ class Ball {
         this.lock=0
         this.state=0
         this.scene = Tableau1
-        this.ballC = this.scene.physics.add.sprite(gameConfig.width / 2, 680, 'ball').setBounce(1,1)
+        this.ballC = this.scene.physics.add.sprite(gameConfig.width / 2, 680, 'ball').setBounce(1,1).setTintFill(0xFFFFFF)
         console.log(this.ballC.width,this.ballC.height)
     }
 

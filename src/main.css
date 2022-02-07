@@ -15,7 +15,7 @@ a:hover{
     text-decoration: underline;
 }
 a:visited{
-    color: #880000;
+    color: #000000;
 }
 #game{
     margin-bottom: 10px;
@@ -33,7 +33,7 @@ canvas{
 
     color: #000000;
     text-align: left;
-    font-size : 1vw;
+    font-size : 2vw;
     display: flex;
     justify-content: start;
     position: absolute;
@@ -59,7 +59,6 @@ canvas{
 
 }
 .vie{
-    font-size: 1vw;
     display: inline-block;
     vertical-align: middle;
 }
