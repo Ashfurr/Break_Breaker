@@ -27,7 +27,6 @@ class Tableau1 extends Phaser.Scene {
         this.player.vie-=1
         }
         if(this.player.vie==0){
-            this.player.vie=3
                 alert("Perdue Looser !")
             this.totalReset()
         }
@@ -47,9 +46,11 @@ class Tableau1 extends Phaser.Scene {
         this.player.score+=1;
     }
     totalReset(){
+        this.player.vie=3
+        this.player.score=0
         this.ballT.Reset();
         this.player.Reset();
-        this.brick.brique.destroy()
+        this.brick.brique.remove()
         this.brick=new Bricks(this)
     }
 }
