@@ -26,17 +26,13 @@ class Tableau1 extends Phaser.Scene {
         this.player.Reset();
         this.player.vie-=1
         }
-        if(this.player.vie==0){
+        if(this.player.vie==2){
                 alert("Perdue Looser !")
             this.totalReset()
         }
         if(this.player.score==54){
             alert('Gagné Sacrebleu!')
-            this.player.score=0
-            this.ballT.Reset();
-            this.player.Reset();
-            this.brick.brique.destroy()
-            this.brick=new Bricks(this)
+            this.totalReset()
         }
         if(this.ballT.state==0){
             this.ballT.ballC.x=this.player.player.x+110
@@ -50,7 +46,7 @@ class Tableau1 extends Phaser.Scene {
         this.player.score=0
         this.ballT.Reset();
         this.player.Reset();
-        this.brick.brique.remove()
-        this.brick=new Bricks(this)
+        this.brick=new Bricks(this);
+
     }
 }
