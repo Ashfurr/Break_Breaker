@@ -1,7 +1,7 @@
 let gameConfig = {
     type: Phaser.AUTO,
-    width: 1728,
-    height: 972,
+    width: 720,
+    height: 900,
     scale: {
         mode: Phaser.Scale.FIT,
         min: {

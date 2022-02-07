@@ -16,11 +16,13 @@ class Keyboard {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
-            if (event.key === "s") {
+            if (event.key === "q") {
                me.scene.player.gauche();
+               me.scene.ballT.Gauche()
             }
             if (event.key === "d") {
                me.scene.player.droite();
+               me.scene.ballT.Droite();
             }
             if (event.key === "j") {
                 ;
@@ -34,11 +36,13 @@ class Keyboard {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
-            if (event.key === "s") {
-                me.scene.player.pasbouger();;
+            if (event.key === "q") {
+                me.scene.player.pasbouger();
+                me.scene.ballT.pasbouger()
             }
             if (event.key === "d") {
-                me.scene.player.pasbouger();  ;
+                me.scene.player.pasbouger();
+                me.scene.ballT.pasbouger();
             }
             if (event.key === "j") {
                 ;
@@ -50,6 +54,7 @@ class Keyboard {
                 ;
             }
             if (event.code==='Space') {
+                me.scene.ballT.launch()
             }
             event.preventDefault(); // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
         }, true);

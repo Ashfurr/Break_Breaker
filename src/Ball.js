@@ -1,12 +1,45 @@
 class Ball {
-    constructor(Tableau1){
-    this.scene=Tableau1
-        this.ballC=this.scene.physics.add.sprite(gameConfig.width/2,550,'pad').setDisplaySize(20, 20).setVelocityY(500).setBounce(1,1);
+    constructor(Tableau1) {
+        this.lock=0
+        this.state=0
+        this.scene = Tableau1
+        this.ballC = this.scene.physics.add.sprite(gameConfig.width / 2, 770, 'ball').setBounce(1,1)
+        console.log(this.ballC.width,this.ballC.height)
     }
-Reset(){
-  this.ballC.x=gameConfig.width/2
-  this.ballC.y=550
-  this.ballC.setVelocityX(0)
-  this.ballC.setVelocityY(500)
-  }
+
+    Reset() {
+        this.ballC.x = gameConfig.width / 2;
+        this.ballC.y = 770;
+        this.ballC.setVelocityX(0);
+        this.state=0
+        this.ballC.setVelocityY(0);
+        this.lock=0
+    }
+
+    Gauche() {
+        if(this.state==0) {
+            this.ballC.setVelocityX(-800);
+            console.log('gauche')
+        }
+    }
+
+    Droite() {
+        if(this.state==0) {
+            this.ballC.setVelocityX(800);
+            console.log('droite ')
+        }
+    }
+    pasbouger(){
+        this.ballC.setVelocityX(0)
+    }
+    launch(){
+        if(this.lock==0){
+        this.state=1;
+        this.lock=1;
+        this.ballC.setVelocityY(-500)
+            console.log('launch')
+        }
+
+
+    }
 }

@@ -4,9 +4,10 @@ class Tableau1 extends Phaser.Scene {
 
     preload(){
         this.load.image('pad','assets/carre.png')
+        this.load.image('ball','assets/ball.png')
         this.load.image('brickr','assets/barreRED.png')
-        this.load.image('brickg','assets/barregreen copie.png')
-        this.load.image('brickp','assets/purple copie.png')
+        this.load.image('brickg','assets/barregreencopie.png')
+        this.load.image('brickp','assets/purple_copie.png')
         this.load.image('bricko','assets/barreprintemps co.png')
     }
     create(){
@@ -19,10 +20,12 @@ class Tableau1 extends Phaser.Scene {
     }
 
     update(){
-        this.player.bord()
+
+        this.player.bord();
         if(this.ballT.ballC.y>gameConfig.height){
-        this.ballT.Reset()
-            console.log('ça marche')
+            console.log('oui')
+        this.ballT.Reset();
+        this.player.Reset();
         }
     }
     win(Joueur){

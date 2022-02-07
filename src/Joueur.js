@@ -17,8 +17,8 @@ class Joueur {
         this.scoreId = scoreID;
 
 
-        this.player=this.Tablo.physics.add.sprite(gameConfig.width/2,900,'pad')
-        this.player.setDisplaySize(400,20)
+        this.player=this.Tablo.physics.add.sprite(gameConfig.width/2,800,'pad')
+        this.player.setDisplaySize(200,20)
         this.player.setImmovable(true)
         this.player.setVelocityX(0)
         this.Tablo.physics.add.collider(this.player,this.Tablo.ballT.ballC,function () {
@@ -26,7 +26,7 @@ class Joueur {
         })
     }
     renvoie(player){
-        this.rando=this.Tablo.ballT.ballC.x
+        this.rando=this.Tablo.ballT.ballC.x-player.x
         this.coeff=this.rando/10
         this.coeff=this.coeff*1.5
         this.Tablo.ballT.ballC.setVelocityX(this.Tablo.ballT.ballC.body.velocity.x+this.coeff*5)
@@ -48,5 +48,10 @@ class Joueur {
         if(this.player.x>=1527){
             this.player.x=1527
         }
+  }
+  Reset(){
+        this.player.x=gameConfig.width/2;
+        this.player.y=900;
+
   }
 }
