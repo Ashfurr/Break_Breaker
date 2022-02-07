@@ -42,11 +42,11 @@ class Joueur {
         this.player.setVelocityX(0)
     }
     bord(){
-        if(this.player.x<=190){
-            this.player.x=190
+        if(this.player.x<=30){
+            this.player.x=30
         }
-        if(this.player.x>=1527){
-            this.player.x=1527
+        if(this.player.x>=670){
+            this.player.x=670
         }
   }
   Reset(){
