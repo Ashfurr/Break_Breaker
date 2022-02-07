@@ -18,17 +18,9 @@ class Keyboard {
             }
             if (event.code==='ArrowLeft') {
                me.scene.player.gauche();
-               me.scene.ballT.Gauche()
             }
             if (event.code==='ArrowRight') {
                me.scene.player.droite();
-               me.scene.ballT.Droite();
-            }
-            if (event.key === "j") {
-                ;
-            }
-            if (event.key === "n") {
-               ;
             }
             event.preventDefault(); // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
         }, true);
@@ -38,20 +30,9 @@ class Keyboard {
             }
             if (event.code==='ArrowLeft') {
                 me.scene.player.pasbouger();
-                me.scene.ballT.pasbouger()
             }
             if (event.code==='ArrowRight') {
                 me.scene.player.pasbouger();
-                me.scene.ballT.pasbouger();
-            }
-            if (event.key === "j") {
-                ;
-            }
-            if (event.key === "n") {
-                ;
-            }
-            if (event.key === "r") {
-                ;
             }
             if (event.code==='Space') {
                 me.scene.ballT.launch()

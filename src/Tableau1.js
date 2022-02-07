@@ -39,6 +39,9 @@ class Tableau1 extends Phaser.Scene {
             this.brick.brique.destroy()
             this.brick=new Bricks(this)
         }
+        if(this.ballT.state==0){
+            this.ballT.ballC.x=this.player.player.x+110
+        }
     }
     win(){
         this.player.score+=1;
