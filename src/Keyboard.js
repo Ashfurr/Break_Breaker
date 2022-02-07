@@ -16,11 +16,11 @@ class Keyboard {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
-            if (event.key === "q") {
+            if (event.code==='ArrowLeft') {
                me.scene.player.gauche();
                me.scene.ballT.Gauche()
             }
-            if (event.key === "d") {
+            if (event.code==='ArrowRight') {
                me.scene.player.droite();
                me.scene.ballT.Droite();
             }
@@ -36,11 +36,11 @@ class Keyboard {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
-            if (event.key === "q") {
+            if (event.code==='ArrowLeft') {
                 me.scene.player.pasbouger();
                 me.scene.ballT.pasbouger()
             }
-            if (event.key === "d") {
+            if (event.code==='ArrowRight') {
                 me.scene.player.pasbouger();
                 me.scene.ballT.pasbouger();
             }

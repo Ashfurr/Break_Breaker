@@ -3,13 +3,13 @@ class Ball {
         this.lock=0
         this.state=0
         this.scene = Tableau1
-        this.ballC = this.scene.physics.add.sprite(gameConfig.width / 2, 680, 'ball').setBounce(1,1).setTintFill(0xFFFFFF)
+        this.ballC = this.scene.physics.add.sprite(gameConfig.width / 2, 690, 'ball').setBounce(1,1).setTintFill(0xFFFFFF)
         console.log(this.ballC.width,this.ballC.height)
     }
 
     Reset() {
         this.ballC.x = gameConfig.width / 2;
-        this.ballC.y = this.scene.player.player.y-30;
+        this.ballC.y = this.scene.player.player.y-20;
         this.ballC.setVelocityX(0);
         this.state=0
         this.ballC.setVelocityY(0);

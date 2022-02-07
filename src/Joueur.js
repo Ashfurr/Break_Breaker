@@ -30,7 +30,7 @@ class Joueur {
         this.$score = this.$el.querySelector(".score")
         this.$vie = this.$el.querySelector(".vie")
 
-        this.player=this.scene.physics.add.sprite(gameConfig.width/2,700,'pad').setTintFill(0xFFFFFF)
+        this.player=this.scene.physics.add.sprite(gameConfig.width/2-100,700,'pad').setOrigin(0,0).setTintFill(0xFFFFFF)
         this.player.setDisplaySize(200,20)
         this.player.setImmovable(true)
         this.player.setVelocityX(0)
@@ -55,15 +55,17 @@ class Joueur {
         this.player.setVelocityX(0)
     }
     bord(){
-        if(this.player.x<=30){
-            this.player.x=30
+        if(this.player.x-20<=0){
+            this.player.x=20
+
         }
-        if(this.player.x>=670){
-            this.player.x=670
+        if(this.player.x>=580){
+            this.player.x=580
+
         }
   }
   Reset(){
-        this.player.x=gameConfig.width/2;
+        this.player.x=gameConfig.width/2-100;
         this.player.y=700;
 
   }
