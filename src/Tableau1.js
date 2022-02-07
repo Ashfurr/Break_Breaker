@@ -4,14 +4,14 @@ class Tableau1 extends Phaser.Scene {
 
     preload(){
         this.load.image('pad','assets/carre.png')
-        this.load.image('ball','assets/ball.png')
+        this.load.image('ball','assets/cercle.png')
         this.load.image('bricks','assets/bricks.png')
 
     }
     create(){
         this.detect=0
         this.ballT=new Ball(this);
-        this.player=new Joueur(this,score);
+        this.player=new Joueur(this,'score');
         this.wall=new Walls(this);
         this.keyboard=new Keyboard(this);
         this.brick=new Bricks(this);
@@ -24,10 +24,29 @@ class Tableau1 extends Phaser.Scene {
             console.log('oui')
         this.ballT.Reset();
         this.player.Reset();
-        this.win()
+        this.player.vie-=1
+        }
+        if(this.player.vie==0){
+            this.player.vie=3
+                alert("Perdue Looser !")
+            this.totalReset()
+        }
+        if(this.player.score==54){
+            alert('Gagné Sacrebleu!')
+            this.player.score=0
+            this.ballT.Reset();
+            this.player.Reset();
+            this.brick.brique.destroy()
+            this.brick=new Bricks(this)
         }
     }
     win(){
-        this.player.score ++;
+        this.player.score+=1;
+    }
+    totalReset(){
+        this.ballT.Reset();
+        this.player.Reset();
+        this.brick.brique.destroy()
+        this.brick=new Bricks(this)
     }
 }

@@ -7,26 +7,26 @@ class Bricks {
             this.brique.createMultiple({
                 key: 'bricks',
                 repeat: 8,
-                setXY: {x: 160, y: 100+i*30, stepX: 60},
+                setXY: {x: 160, y: 100+i*31, stepX: 61},
             })
         }
 
         this.brique.createMultiple({
                 key: 'bricks',
                 repeat: 3,
-                setXY: {x: 160, y: 220, stepX: 60},
+                setXY: {x: 160, y: 224, stepX: 61},
             })
-        this.brique.create(400,220,'bricks').setTintFill(0x00FF00)
-        this.brique.create(460,220,'bricks').setTintFill(0xFF0000)
+        this.verte=this.brique.create(404,224,'bricks').setTintFill(0x00FF00)
+        this.rouge=this.brique.create(465,224,'bricks').setTintFill(0xFF0000)
         this.brique.createMultiple({
             key: 'bricks',
             repeat: 2,
-            setXY: {x: 520, y: 220, stepX: 60},
+            setXY: {x: 526, y: 224, stepX: 61},
         })
         this.brique.createMultiple({
             key: 'bricks',
             repeat: 8,
-            setXY: {x: 160, y: 250, stepX: 60},
+            setXY: {x: 160, y: 255, stepX: 61},
         })
 //160 x car 9 brique*60 = 540 800-540=260/2=130+60/2=160 c'est pour centrer
         console.log(this.brique.getChildren([42]))
@@ -38,9 +38,15 @@ class Bricks {
     {
         this.renvoie(briques)
         briques.destroy()
+        if(briques==this.verte){
+            this.scene.player.vie+=1
+        }
+        if(briques==this.rouge){
+            this.scene.player.score+=10
+        }
     }
     renvoie(briques){
-        console.log(briques.x)
+        this.scene.win()
         this.rando=this.scene.ballT.ballC.x-briques.x
         this.coeff=this.rando/10
         this.coeff=this.coeff*1.5
